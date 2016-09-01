@@ -1,2 +1,2 @@
-# Programming-languages-2016
-Good Luck :)
+# Programming languages
+GOOD LUCK :)
