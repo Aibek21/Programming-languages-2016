@@ -1,6 +1,5 @@
 #include <iostream>
-#include <vector>
-          
+
 using namespace std;
 
 struct Student{
@@ -13,28 +12,16 @@ struct Student{
 
 int main(){
 	
-	freopen("students.txt", "r", stdin);
+	Student s;
 
-	vector<Student> v;
-
-	int n;
-	cin >> n;
-
-	for(int i = 0; i < n; i++){
-		Student s;
-		cin >> s.name >> s.age >> s.gpa;
-		v.push_back(s);		
-	}
+	s.name = "Dastan";
+	s.age = 17;
+	s.gpa = 4.0;
 
 
-	cout << v.size() << "\n";
 
 
-	for(int i = 0; i < v.size(); i++){
-		cout << v[i].name <<" "<< v[i].age << " " << v[i].gpa <<"\n";
-	}
-
-	
+	cout << s.name << " "<<s.age << " "<<s.gpa;
 
 
 

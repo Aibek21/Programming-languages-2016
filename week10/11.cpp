@@ -1,13 +1,8 @@
 #include <iostream>
 #include <vector>
+#include "student.h"
           
 using namespace std;
-
-struct Student{
-	string name;
-	int age;
-	double gpa;
-};
 
 
 int main(){
@@ -25,13 +20,24 @@ int main(){
 		v.push_back(s);		
 	}
 
+	bool sw = true;
 
-	cout << v.size() << "\n";
-
-
-	for(int i = 0; i < v.size(); i++){
-		cout << v[i].name <<" "<< v[i].age << " " << v[i].gpa <<"\n";
+	while(sw){
+		sw = false;
+		for(int i = 0; i < v.size() - 1; i++){
+			if(v[i].gpa > v[i+1].gpa){
+				swap(v[i], v[i+1]);
+				sw = true;
+			} 			
+		}
 	}
+
+
+	for(int i = 0; i < v.size(); i++)
+		cout << v[i].name <<" "<<v[i].age << " "<<v[i].gpa <<"\n";
+	
+
+
 
 	
 

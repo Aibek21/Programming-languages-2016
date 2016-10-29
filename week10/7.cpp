@@ -2,70 +2,42 @@
 
 using namespace std;
 
+bool isDigit(char s){
+
+	int code = (int)s;
+	if(code >= 48 && code <= 57) 
+		return true;
+	else 
+		return false;
+}
+
+
+
+void hint(){
+	cout << "\nEnter next char or q for exit\n";
+}
+
 
 int main(){
 
-	freopen("numbers.txt", "r", stdin);
+	char s;
+	
+	cout << "Enter any char\n";
 
+	while(s != 'q'){
+		
+		cin >> s;
 
-	int n;
-	cin >> n;
+		if(isDigit(s) == true)
+			cout << "You entered number\n";
+		else 
+			cout << "Not number\n";
 
-	int a[n];
+		hint();
 
-	for(int i = 0; i < n; i++)
-		cin >> a[i];
-
-
-	//bubble sort 1
-/*
-	for(int i = 0; i < n; i++){
-		for(int j = 0; j < n-1; j++){
-			if(a[j] > a[j+1])
-				swap(a[j],a[j+1]);
-		}
-	}
-*/
-
-
-
-	//bubble sort 2
-
-/*
-	for(int i = 0; i < n; i++){
-		for(int j = i + 1; j < n; j++){
-			if(a[i] > a[j])
-				swap(a[i], a[j]);
-		}
-	}
-*/
-
-
-
-	//bubble sort 3
-
-	bool swapped = true;
-
-	while(swapped){
-		swapped = false;
-
-		for(int i = 0; i < n-1; i++){
-			if(a[i] > a[i+1]){
-				swap(a[i], a[i+1]);
-				swapped = true;
-			}
-		}
-
-	}
-	                          
-
-	for(int i = 0; i < n; i++){
-		cout << a[i] << " ";
-	}                           
+	}   
 
 	
-		
-
 
 
 return 0;    
