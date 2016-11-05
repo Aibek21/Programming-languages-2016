@@ -1,5 +1,6 @@
-4
+5
 Dastan 17 2.5
 Aigerim 17 4.0
 Arman 18 3.8
 Aliya 17 4.0 
+Sedi 17 3.7
